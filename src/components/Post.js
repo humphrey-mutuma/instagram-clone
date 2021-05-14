@@ -9,7 +9,7 @@ const Posts = ({ username, imageUrl, caption }) => {
         <Avatar
           className="post__avatar"
           alt="Humphrey"
-          src="/staic/images/avatar/1.jpg"
+          src="/static/images/avatar/1.jpg"
         />
         <h3>{username}</h3>
       </div>
