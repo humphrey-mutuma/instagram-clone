@@ -195,22 +195,11 @@ function App() {
             />
           ))}
         </div>
-        <div className="app_postsRight">
-          {/* <InstagramEmbed
-        url=""
-        maxWidth={320}
-        hideCaption={false}
-        containerTagName="div"
-        protocol=""
-        injectScript
-        onLoading={() => {}}
-        onSuccess={() => {}}
-        onAfterRender={() => {}}
-        onFailure={() => {}}
-      /> */}
 
+        <div className="app_postsRight">
           <InstaEmbed />
         </div>
+        
       </div>
 
       {user?.displayName ? (
