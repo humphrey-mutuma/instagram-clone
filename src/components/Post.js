@@ -3,6 +3,7 @@ import React from "react";
 import "./Post.css";
 
 const Post = ({ username, imageUrl, caption }) => {
+  
   return (
     <div className="post">
       <div className="post__header">
@@ -18,6 +19,7 @@ const Post = ({ username, imageUrl, caption }) => {
       <h4 className="post__text">
         <strong>{username}</strong>: {caption}
       </h4>
+
     </div>
   );
 };
