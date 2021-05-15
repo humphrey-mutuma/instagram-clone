@@ -2,7 +2,7 @@ import { Avatar } from "@material-ui/core";
 import React from "react";
 import "./Post.css";
 
-const Posts = ({ username, imageUrl, caption }) => {
+const Post = ({ username, imageUrl, caption }) => {
   return (
     <div className="post">
       <div className="post__header">
@@ -22,4 +22,4 @@ const Posts = ({ username, imageUrl, caption }) => {
   );
 };
 
-export default Posts;
+export default Post;
