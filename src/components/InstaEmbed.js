@@ -16,7 +16,7 @@ const InstaEmbed = () => {
 
   return (
     <section className="instaEmbed">
-      <header >
+      <header>
         <div>
           <Avatar
             className="user__avatar"
@@ -38,11 +38,11 @@ const InstaEmbed = () => {
       </header>
       <p>Suggestions For You</p>
       <main>
-        <Followers />
-        <Followers />
-        <Followers />
-        <Followers />
-        <Followers />
+        <Followers username="SamOmwangs" />
+        <Followers username="Ezra254" />
+        <Followers username="Kiongosmkuu" />
+        <Followers username="tharichkid" />
+        <Followers username ="Bazumkuu"/>
       </main>
       <footer>
         <span>

@@ -10,11 +10,12 @@ import ImageUpload from "./components/ImageUpload";
 import { IconButton } from "@material-ui/core";
 import InstaEmbed from "./components/InstaEmbed";
 import HomeIcon from "@material-ui/icons/Home";
-import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
+import NearMeOutlinedIcon from "@material-ui/icons/NearMeOutlined";
 import ExploreOutlinedIcon from "@material-ui/icons/ExploreOutlined";
 import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
+import MenuPopupState from "./components/Menu";
 
 function getModalStyle() {
   const top = 50;
@@ -44,6 +45,7 @@ function App() {
   const [openSignIn, setOpenSignIn] = useState(false);
   const [posts, setPosts] = useState([]);
   const [open, setOpen] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -192,7 +194,7 @@ function App() {
               <HomeIcon />
             </IconButton>
             <IconButton>
-              <SendOutlinedIcon />
+              <NearMeOutlinedIcon />
             </IconButton>
             <IconButton>
               <ExploreOutlinedIcon />
@@ -211,6 +213,9 @@ function App() {
               </div>
             )}
           </div>
+          <IconButton className="toggleButton">
+            <MenuPopupState />
+          </IconButton>
         </nav>
       </header>
 
@@ -229,7 +234,9 @@ function App() {
         </div>
 
         <div className="app_postsRight">
-          <InstaEmbed />
+          <aside className="aside">
+            <InstaEmbed />
+          </aside>
         </div>
       </div>
 

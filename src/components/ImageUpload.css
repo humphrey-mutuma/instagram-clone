@@ -1,9 +1,27 @@
 .imageUpload{
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 74vw;
   margin: 10px auto;
+  border: 1px solid rgba(128, 128, 128, 0.233);
+  padding: 10px;
+  background-color: white;
+}
+.firstInput{
+  padding: 5px auto;
+  margin-bottom: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.308) ;
+  height: 1.5rem;
+  outline: none;
+  border-radius: 5px;
+}
+.fileInput{
+  margin: 5px auto 5px inherit;
+}
 
+.imageUpload button{
+  margin-top: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.308) ;
 }
 .imageUpload__progress{
 width: 100%;

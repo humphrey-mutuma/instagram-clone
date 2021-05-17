@@ -1,8 +1,9 @@
-import { Avatar } from "@material-ui/core";
+import { Avatar, IconButton } from "@material-ui/core";
 import { useState, useEffect } from "react";
 import { db } from "../firebase";
 import "./Post.css";
 import firebase from "firebase";
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
 const Post = ({ postId, user, username, imageUrl, caption }) => {
   const [comments, setComments] = useState([]);
@@ -39,12 +40,19 @@ const Post = ({ postId, user, username, imageUrl, caption }) => {
   return (
     <div className="post">
       <div className="post__header">
-        <Avatar
-          className="post__avatar"
-          alt={username}
-          src="/static/images/avatar/1.jpg"
-        />
-        <h3>{username}</h3>
+        <div>
+          <Avatar
+            className="post__avatar"
+            alt={username}
+            src="/static/images/avatar/1.jpg"
+          />
+          <h3>{username}</h3>
+        </div>
+        <div>
+          <IconButton>
+            <MoreHorizIcon className="post__HorizonIcon" />
+          </IconButton>
+        </div>
       </div>
 
       <img className="post__image" src={imageUrl} alt="" />

@@ -4,7 +4,16 @@
   justify-content: space-between;
   margin: 10px auto;
 }
-.follower >div > span{
+.followerLeft{
+  flex: 0.2;
+}
+.follower >div span{
   font-size: 13px;
   color: grey;
+}
+.followerRight{
+  display: flex;
+  flex: 0.8;
+  align-items: center;
+  justify-content: space-between;
 }
