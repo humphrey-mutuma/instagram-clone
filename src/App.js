@@ -7,7 +7,14 @@ import Modal from "@material-ui/core/Modal";
 import { Button, Input } from "@material-ui/core";
 import ImageUpload from "./components/ImageUpload";
 // import InstagramEmbed from "react-instagram-embed";
+import { IconButton } from "@material-ui/core";
 import InstaEmbed from "./components/InstaEmbed";
+import HomeIcon from "@material-ui/icons/Home";
+import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
+import ExploreOutlinedIcon from "@material-ui/icons/ExploreOutlined";
+import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
+import SearchIcon from "@material-ui/icons/Search";
+import InputBase from "@material-ui/core/InputBase";
 
 function getModalStyle() {
   const top = 50;
@@ -41,7 +48,6 @@ function App() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [user, setUser] = useState(null);
-
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
@@ -166,21 +172,47 @@ function App() {
         </div>
       </Modal>
 
-      <div className="app__header">
-        <img
-          className="app__headerImage"
-          src="https://1000logos.net/wp-content/uploads/2017/02/Instagram-Logo.png"
-          alt="instagram logo"
-        />
-        {user ? (
-          <Button onClick={() => auth.signOut()}>Logout</Button>
-        ) : (
-          <div className="app__loginContainer">
-            <Button onClick={() => setOpenSignIn(true)}>Sign In</Button>
-            <Button onClick={() => setOpen(true)}>Sign Up</Button>
+      <header className="app__header">
+        <nav className="app_nav">
+          <img
+            className="app__headerImage"
+            src="https://1000logos.net/wp-content/uploads/2017/02/Instagram-Logo.png"
+            alt="instagram logo"
+          />
+
+          <div className="search">
+            <div className="searchIcon">
+              <SearchIcon />
+            </div>
+            <InputBase placeholder="Search…" />
           </div>
-        )}
-      </div>
+
+          <div className="nav__icons">
+            <IconButton>
+              <HomeIcon />
+            </IconButton>
+            <IconButton>
+              <SendOutlinedIcon />
+            </IconButton>
+            <IconButton>
+              <ExploreOutlinedIcon />
+            </IconButton>
+            <IconButton>
+              <FavoriteBorderOutlinedIcon />
+            </IconButton>
+          </div>
+          <div className="nav_buttons">
+            {user ? (
+              <Button onClick={() => auth.signOut()}>Logout</Button>
+            ) : (
+              <div className="app__loginContainer">
+                <Button onClick={() => setOpenSignIn(true)}>Sign In</Button>
+                <Button onClick={() => setOpen(true)}>Sign Up</Button>
+              </div>
+            )}
+          </div>
+        </nav>
+      </header>
 
       <div className="app_posts">
         <div className="app_postsLeft">
@@ -199,7 +231,6 @@ function App() {
         <div className="app_postsRight">
           <InstaEmbed />
         </div>
-        
       </div>
 
       {user?.displayName ? (

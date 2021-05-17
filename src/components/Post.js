@@ -41,7 +41,7 @@ const Post = ({ postId, user, username, imageUrl, caption }) => {
       <div className="post__header">
         <Avatar
           className="post__avatar"
-          alt="Humphrey"
+          alt={username}
           src="/static/images/avatar/1.jpg"
         />
         <h3>{username}</h3>

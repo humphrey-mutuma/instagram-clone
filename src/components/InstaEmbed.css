@@ -1,1 +1,25 @@
-
+.instaEmbed > header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user__avatar {
+  width: 3.5rem !important;
+  height: 3.5rem  !important; 
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.instaEmbed >header > div > span{
+  color: grey;
+  font-size: 13px;
+}
+span a{
+  cursor: pointer;
+  color: rgba(128, 128, 128, 0.404) !important;
+  padding: 2px 5px;
+  float: left;
+}
+.instaEmbed > p{
+  margin-top: 5vh;
+  color: rgba(128, 128, 128, 0.404) !important;
+}

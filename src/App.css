@@ -1,7 +1,6 @@
 .app{
   background-color: #fafafa;
-  height: 100vh;
-
+  min-height: 100vh;
 }
 .app__header{
   position: sticky;
@@ -9,31 +8,86 @@
   object-fit: contain;
   z-index: 1;
   background-color: white;
-  padding: 20px;
   border: 1px solid lightgray;
-  display: flex;
-  justify-content: space-between;
 }
 .app_posts{
   padding: 20px;
   display: flex;
   justify-content: center;
 }
+.app_nav{
+  width: 77vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0;
+}
+.search{
+  border: 1px solid rgba(128, 128, 128, 0.09);
+  border-radius: 5px;
+  display: flex;
+  margin: auto ;
+  align-items: center;
+  outline: none;
+  background-color: rgba(128, 128, 128, 0.05);
+}
+.searchIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  outline: none;
+  margin: auto 5px;
+}
+.searchIcon > .MuiSvgIcon-root{
+font-size: 18px;
+}
 
-/* ********** */
+.nav__icons{
+  display: flex-end;
+  color: black;
+}
+.nav__icons .MuiSvgIcon-root{
+  color: black;
+}
 /* to be corrected */
 .app_postsRight{
   margin-left: 20px;
   max-width: 25vw;
-  border: 1px solid red;
 }
-
 
 /************/
 .app__headerImage{
-    width: 70px;object-fit: contain;
+    width: 90px;
+    object-fit: contain;
 }
 .app__signup{
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 825px) {
+  .app_posts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.app_postsLeft{
+  border: 1px solid red;
+  min-width: 70vw !important;
+}
+.app_postsRight{
+  border: 1px solid red;
+  min-width: 75vw;
+  margin: auto !important;
+}
+.search{
+  display: none;
+}
+ .post{
+  min-width: 75vw !important;
+}
+
 }

@@ -1,0 +1,10 @@
+.follower{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px auto;
+}
+.follower >div > span{
+  font-size: 13px;
+  color: grey;
+}
